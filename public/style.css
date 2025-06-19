@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+    color: white;
+    overflow: auto;
+}
+
+.new-container{
+    margin: 50px 100px;
+    display: flex;
+    gap: 2rem;
+}
+
+.content-img{
+    width: 270px;
+    height: 400px;
+}
+
+.content-title{
+    font-size: 3rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.content-para{
+    font-size: .9rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container{
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.heading-1{
+    font-size: 3rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card-container a{
+    cursor: pointer;
+    color: #fff;
+    transition: all .2s ease;
+}
+
+.card{
+    height: 400px;
+    width: 300px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: -11;
+    
+}
+.card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -9;
+    box-shadow: inset 0 -120px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card-container a:hover{
+    transform: translateY(-5px);
+}
+
+.card img{
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+}
+
+.card-content{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.card-title{
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.card .genres{
+    font-family: "Noto Sans JP", sans-serif;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    padding: 0 8px;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.btn{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 20px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #29aa34;
+    color: white;
+    border: none;
+    transition: all .2s ease;
+}
+.btn:hover{
+    transform: translateY(-5px);
+}
+
+.btn-link{
+    margin: 50px 0;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+    <% if(hasData === true) { %>
+    <h1 class="heading-1">Here are your recommendations!</h1>
+    <div class="card-container">
+        <% data.map((item) => { %>
+            <a href="anime/<%= item.id %>">
+                <div class="card">
+                    <img src="<%= item.imageUrl %>" alt="<%= item.title %>">
+                    <div class="card-content">
+                        <h3 class="card-title"><%= item.title %></h3>
+                        <p class="genres">Genre: <%= item.genres %></p>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+    <% } else { %>
+        <h1 class="heading-1"><%= content %></h1>
+    <% } %>
+    
+    <a href="/recommendations" class="btn-link">
+        <button class="btn">Give me some anime recommendations</button>
+    </a>
+    </div>
+</body>
+</html>
